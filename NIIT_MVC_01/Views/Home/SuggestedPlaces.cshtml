@@ -1,0 +1,49 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title>Suggested places</title>
+</head>
+<body style="background-color:black; margin:0px; font-family:arial, helvetica, sansserif;">
+    <div>
+        <table style="width:100%;" border="0">
+            <tr>
+                <td style="background-image:url(../images/header_bg.jpg); background-repeat:repeat-x; height:200px">
+                    <table style="width:100%;" border="0">
+                        <tr>
+                            <td style="width:261px;height:200px; vertical-align:top">
+                                <img src="../../images/SideImage1.jpg" width="261" height="190" />
+                            </td>
+                            @Html.Partial("_titleOnPage")
+                            <td style="width:312px; text-align: right; vertical-align:bottom">
+                                <img src="../images/SideImage2.jpg" width="312" height="173" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:35px;background-color:#df0005;padding-left:10%;">
+                    <b style="color:#f5eb8e;">
+                        Suggested places Page &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                         @Html.Partial("_NavLinks")
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width:100%; " border="0">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="background-color:#5D0F05">
+                                <table style="width:98%;" border="0">
+                                    <tr>
+                                        <td style="vertical-align:top;">
+                                            <article>
+                                                @for (var i = 0; i < @ViewBag.names.Length; i++)
+                                                {
+                                                    <h2>@ViewBag.names[i]</h2>
+                                                    <h4>
+                                                        Venue: @ViewBag.venues[i]
+                                                    </h4>
+                                                }
+    @Html.Partial("_BottomPartial")

@@ -1,0 +1,102 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title> Home </title>
+</head>
+<body style="background-color:black; margin:0px; font-family:arial, helvetica, sansserif;">
+    <div>
+        <table style="width:100%;" border="0">
+            <tr>
+                <td style="background-image:url(images/header_bg.jpg);background-repeat:repeat-x; height:200px">
+                <table style="width:100%;" border="0">
+                    <tr>
+                        <td style="width:261px;height:200px;vertical-align:top">
+                            <img src="../../images/SideImage1.jpg" width="261" height="190" />
+                        </td>
+                        @Html.Partial("_titleOnPage")
+                        <td style="width:312px; text-align:right; vertical-align:bottom">
+                            <img src="../../images/SideImage2.jpg" width="312" height="173" />
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:35px; background-color:#df0005;padding-left:10%;">
+                    <b style="color:#f5eb8e;"> Home page for MyPlaces &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                     @Html.Partial("_NavLinks")</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width:100%;  background-color:black " border="0">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style=" background-color:#6F0000">
+                                <table style="width:98%;" border="0">
+                                    <tr>
+                                        <td style="vertical-align:top;">
+                                            <table border="0" style="margin-left:auto;margin-right:auto; ">
+                                                <tr>
+                                                    <td style="color:#003876; font-weight:bold;padding:10px">
+                                                        Working Links
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home1.jpg"   width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home2.jpg" width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home3.jpg" width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home4.jpg" width="185" height="229" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-left:auto;margin-right:auto"  border="0">
+                                                <tr>
+                                                    <td style="color:#003876; font-weight:bold;padding:10px">
+                                                        Undergoing work
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home5.jpg" width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home6.jpg" width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home7.jpg"   width="185" height="229" />
+                                                    </td>
+                                                    <td style="padding:10px">
+                                                        <img src="../../images/Home8.jpg" width="185" height="229" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p>&nbsp;</p>
+                                        </td>                                        
+                                            @Html.Partial("_SidePartial")                                        
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="width:10%">  &nbsp;</td>
+                            <td style="text-align:right;font-size:11px; color:white;">
+                                &copy; Krutarth Rao
+                            </td>
+                            <td style="width:10%">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

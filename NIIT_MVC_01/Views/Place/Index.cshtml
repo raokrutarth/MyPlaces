@@ -1,0 +1,103 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Place Index</title>
+</head>
+<body style="background-color:black; margin:0px; font-family:arial, helvetica, sansserif;">
+    <div>
+        <table style="width:100%;"
+               border="0">
+            <tr>
+                <td style="background-image:url(images/header_bg.jpg); background-repeat:repeat-x;height:200px">
+                    <table style="width:100%;" border="0">
+                        <tr>
+                            <td style="width:261px;height:200px; vertical-align:top">
+                                <img src="../../images/SideImage1.jpg" width="261" height="190" />
+                            </td>
+                            @Html.Partial("_titleOnPage")
+                            <td style="width:312px; text-align:right; vertical-align:bottom">
+                                <img src="../../images/SideImage2.jpg" width="312" height="173" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:35px;  background-color:#df0005;padding-left:10%;">
+                    <b style="color:#f5eb8e;">
+                        Adding Place with DBcontext &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                        @Html.Partial("_NavLinks")
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width:100%; background-color:black " border="0">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="background-color:#5D0F05">
+                                <table style="width:98%;" border="0">
+                                    <tr>
+                                        <td style="vertical-align:top;"
+                                            <article>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+@model IEnumerable<MyPlaces.Models.Place>
+ @{
+           if(Model.Count<MyPlaces.Models.Place>() > 0)
+           { 
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.streetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.residents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.visitFrequency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.placeType)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) 
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.streetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.residents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.visitFrequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.placeType)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+     </table>
+    }
+
+     else
+        {
+            <font style="color:red;"><h3>No saved places exist.</h3></font>
+        }
+}
+@Html.Partial("_BottomPartial")
